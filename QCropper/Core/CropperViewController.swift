@@ -158,8 +158,17 @@ open class CropperViewController: UIViewController, Rotatable, StateRestorable, 
     open lazy var toolbar: UIView = {
         let toolbar = Toolbar(frame: CGRect(x: 0, y: 0, width: self.view.width, height: view.safeAreaInsets.bottom + barHeight))
         toolbar.doneButton.addTarget(self, action: #selector(confirmButtonPressed(_:)), for: .touchUpInside)
+        toolbar.doneButton.setTitle(NSLocalizedString("Done", comment: ""), for: .normal)
+        toolbar.doneButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        toolbar.doneButton.titleLabel?.minimumScaleFactor = 0.1
         toolbar.cancelButton.addTarget(self, action: #selector(cancelButtonPressed(_:)), for: .touchUpInside)
+        toolbar.cancelButton.setTitle(NSLocalizedString("Cancel", comment: ""), for: .normal)
+        toolbar.cancelButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        toolbar.cancelButton.titleLabel?.minimumScaleFactor = 0.1
         toolbar.resetButton.addTarget(self, action: #selector(resetButtonPressed(_:)), for: .touchUpInside)
+        toolbar.resetButton.setTitle(NSLocalizedString("RESET", comment: ""), for: .normal)
+        toolbar.resetButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        toolbar.resetButton.titleLabel?.minimumScaleFactor = 0.1
 
         return toolbar
     }()

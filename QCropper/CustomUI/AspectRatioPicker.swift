@@ -139,6 +139,8 @@ public class AspectRatioPicker: UIView {
             let title = ar.description
             let width = title.width(withFont: font) + padding * 2
             button.setTitle(title, for: .normal)
+            button.titleLabel?.adjustsFontSizeToFitWidth = true
+            button.titleLabel?.minimumScaleFactor = 0.1
             button.frame = CGRect(x: x, y: 0, width: width, height: buttonHeight)
             x += width + padding
 
