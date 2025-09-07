@@ -117,7 +117,7 @@ public class AspectRatioPicker: UIView {
         let buttonHeight: CGFloat = 20
         let colorImage = UIImage(color: UIColor(white: 0.5, alpha: 0.4),
                                  size: CGSize(width: 10, height: 10))
-        let backgroundImage = colorImage?.resizableImage(withCapInsets: UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3))
+        let backgroundImage = colorImage.resizableImage(withCapInsets: UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3))
 
         var x: CGFloat = margin
         for i in 0 ..< buttonCount {
@@ -200,11 +200,11 @@ public class AspectRatioPicker: UIView {
 
         let normalColorImage = UIImage(color: UIColor(white: 0.14, alpha: 1),
                                        size: CGSize(width: 10, height: 10))
-        let normalBackgroundImage = normalColorImage?.resizableImage(withCapInsets: UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3))
+        let normalBackgroundImage = normalColorImage.resizableImage(withCapInsets: UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3))
 
         let selectedColorImage = UIImage(color: UIColor(white: 0.56, alpha: 1),
                                          size: CGSize(width: 10, height: 10))
-        let selectedBackgroundImage = selectedColorImage?.resizableImage(withCapInsets: UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3))
+        let selectedBackgroundImage = selectedColorImage.resizableImage(withCapInsets: UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3))
 
         /// ??? "QCropper.checkmark" not work
         let checkmark = UIImage(named: "QCropper.check.mark", in: QCropper.Config.resourceBundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
