@@ -25,6 +25,7 @@ class TopBar: UIView {
         let button = self.iconButton(iconName: "QCropper.aspectratio.fill")
         button.right = self.width
         button.autoresizingMask = [.flexibleTopMargin, .flexibleLeftMargin]
+        button.isSelected = true
         return button
     }()
 

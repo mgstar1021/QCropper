@@ -177,11 +177,8 @@ open class CropperViewController: UIViewController, Rotatable, StateRestorable, 
         .original,
         .freeForm,
         .square,
-        .ratio(width: 9, height: 16),
         .ratio(width: 8, height: 10),
-        .ratio(width: 5, height: 7),
         .ratio(width: 3, height: 4),
-        .ratio(width: 3, height: 5),
         .ratio(width: 2, height: 3)
     ]
 
@@ -450,7 +447,7 @@ open class CropperViewController: UIViewController, Rotatable, StateRestorable, 
         scrollView.center = backgroundView.convert(defaultCropBoxCenter, to: scrollViewContainer)
         imageView.transform = .identity
         imageView.frame = scrollView.bounds
-        imageView.image = originalImage
+//        imageView.image = originalImage
         overlay.frame = backgroundView.bounds
         overlay.cropBoxFrame = CGRect(center: defaultCropBoxCenter, size: defaultCropBoxSize)
 
@@ -487,7 +484,7 @@ open class CropperViewController: UIViewController, Rotatable, StateRestorable, 
             aspectRatioPicker.aspectRatios = verticalAspectRatios
         }
         aspectRatioPicker.rotated = false
-        aspectRatioPicker.selectedAspectRatio = .freeForm
+        aspectRatioPicker.selectedAspectRatio = .ratio(width: 3, height: 4)
         updateButtons()
     }
 

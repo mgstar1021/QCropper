@@ -41,7 +41,8 @@ extension UIImage {
             var outputWidth = cropSize.width * image.size.width / (imageViewBoundsSize.width * xScale)
             let maxWidth = Self.maxWidthForCropSize(cropSize)
             if outputWidth > maxWidth {
-                outputWidth = maxWidth
+                // ただのサイズ調整のみに見えるのでコメントアウト
+                //outputWidth = maxWidth
             }
 
             if let cgImage = Self.newTransformedImage(transform,
